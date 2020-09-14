@@ -83,11 +83,9 @@ def wordcloud(article):
     plt.show()
 
 
-if(sys.argv[1]):
-    url = sys.argv[1]
-else:
-    url = 'https://www.math3ma.com/blog/understanding-entanglement-with-svd'
-    
+
+url = sys.argv[1]
+
 story_data_request = urllib.request.Request(url)
 response = urllib.request.urlopen(story_data_request)
 summary = parse_article(response)
